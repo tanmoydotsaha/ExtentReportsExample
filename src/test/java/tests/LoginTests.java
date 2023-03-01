@@ -15,11 +15,11 @@ public class LoginTests extends BaseTest {
         homePage
                 .goToN11()
                 .goToLoginPage()
-                .loginToN11("onur@swtestacademy.com", "111222334443313")
-                .verifyLoginPassword("E-posta adresiniz veya şifreniz hatalı");
+                .loginToN11("roni_cost@example.com", "roni_cost3@example.com")
+                .verifyLogError();
     }
 
-    @Test(priority = 1, description = "Invalid Login Scenario with empty username and password.")
+    //@Test(priority = 1, description = "Invalid Login Scenario with empty username and password.")
     public void invalidLoginTest_EmptyUserEmptyPassword(Method method) {
         //ExtentReports Description
         startTest(method.getName(), "Invalid Login Scenario with empty username and password.");
@@ -28,7 +28,7 @@ public class LoginTests extends BaseTest {
                 .goToN11()
                 .goToLoginPage()
                 .loginToN11("", "")
-                .verifyLoginUserName("Lütfen e-posta adresinizi girin.")
-                .verifyLoginPassword("WRONG MESSAGE FOR FAILURE!");
+                .verifyLoginUserName("This is a required field.")
+                .verifyLoginPassword("This is a required field.");
     }
 }

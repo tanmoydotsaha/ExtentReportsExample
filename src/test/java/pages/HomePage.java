@@ -15,12 +15,12 @@ public class HomePage extends BasePage {
     /**
      * Variables
      */
-    String baseURL = "https://www.n11.com/";
+    String baseURL = "https://magento.softwaretestingboard.com/";
 
     /**
      * Web Elements
      */
-    By signInButtonClass = By.className("btnSignIn");
+    By signInButtonClass = By.xpath("//div[@class='panel header']//a[contains(text(),'Sign In')]");
 
     /**
      * Page Methods
