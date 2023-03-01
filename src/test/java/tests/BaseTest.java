@@ -36,6 +36,7 @@ public class BaseTest {
 
         firefoxOptions.setCapability("proxy", proxy);
         driver = new FirefoxDriver(firefoxOptions);
+
     }
 
     @BeforeMethod
